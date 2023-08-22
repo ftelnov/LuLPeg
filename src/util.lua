@@ -15,7 +15,7 @@ local m, s, t = require"math", require"string", require"table"
 local m_max, s_match, s_gsub, t_concat, t_insert
     = m.max, s.match, s.gsub, t.concat, t.insert
 
-local compat = require"compat"
+local compat = require("./compat")
 
 
 -- No globals definition:

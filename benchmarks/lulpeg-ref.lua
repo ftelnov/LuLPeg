@@ -570,7 +570,7 @@ packages['datastructures'] = function (...)
 local getmetatable, pairs, setmetatable, type
     = getmetatable, pairs, setmetatable, type
 local m, t , u = require"math", require"table", require"util"
-local compat = require"compat"
+local compat = require("./compat")
 local ffi if compat.luajit then
     ffi = require"ffi"
 end
@@ -1880,7 +1880,7 @@ local getmetatable, setmetatable, load, loadstring, next
 local m, s, t = require"math", require"string", require"table"
 local m_max, s_match, s_gsub, t_concat, t_insert
     = m.max, s.match, s.gsub, t.concat, t.insert
-local compat = require"compat"
+local compat = require("./compat")
 local
 function nop () end
 local noglobals, getglobal, setglobal if pcall and not compat.lua52 and not release then
@@ -2536,7 +2536,7 @@ packages['constructors'] = function (...)
 local getmetatable, ipairs, newproxy, print, setmetatable
     = getmetatable, ipairs, newproxy, print, setmetatable
 local t, u, compat
-    = require"table", require"util", require"compat"
+    = require"table", require"util", require("./compat")
 local t_concat = t.concat
 local   copy,   getuniqueid,   id,   map
     ,   weakkey,   weakval
