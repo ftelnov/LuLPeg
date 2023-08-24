@@ -6,7 +6,7 @@ local getmetatable, pairs, setmetatable, type
 local m, t , u = require"math", require"table", require"util"
 
 
-local compat = require"compat"
+local compat = require("lulpeg_compat")
 local ffi if compat.luajit then
     ffi = require"ffi"
 end
